@@ -23,6 +23,11 @@ public class Student {
 	private int studentId;
 	
 	/**
+	 * the students Grade Point Average.
+	 */
+	private float gpa;
+	
+	/**
 	 * Create a new student.
 	 * 
 	 * @param name the student's starting name.
@@ -33,12 +38,15 @@ public class Student {
 		this.name = name;
 		this.age = age;
 		this.studentId = studentId;
+		gpa = -1;
 	}
 	
 	/**
 	 * Creates an empty student object.
 	 */
-	public Student (){}
+	public Student (){
+		gpa = -1;
+	}
 	
 	/**
 	 * Get the student's name.
@@ -65,6 +73,21 @@ public class Student {
 	 */
 	public int getAge(){
 		return age;
+	}
+	
+	public float getGPA(){
+		if (gpa < 0){
+			return Float.NaN;
+		}
+		return gpa;
+	}
+	
+	public void setGPA(float gpa){
+		if (gpa >= 0 && gpa <= 4.0){
+			this.gpa = gpa;
+		}else{
+			throw new IllegalArgumentException("Invalid GPA");
+		}
 	}
 	
 	/**
@@ -108,6 +131,10 @@ public class Student {
 	 */
 	@Override
 	public String toString(){
-		return name + " age: " + age + " ID: " + studentId;
+		if (gpa < 0){
+			return name + " age: " + age + " ID: " + studentId;
+		}else{
+			return name + " age: " + age + " ID: " + studentId + " GPA: " + gpa;
+		}
 	}
 }

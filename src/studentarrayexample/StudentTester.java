@@ -23,6 +23,9 @@ public class StudentTester {
 					new Student()
 				};
 		
+		// give Brian a GPA
+		students[0].setGPA(4.0f);
+		
 		// fill in the last student.
 		students[4].setName("Sarah Oslin");
 		students[4].setAge(27);
