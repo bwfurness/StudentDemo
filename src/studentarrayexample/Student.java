@@ -1,7 +1,7 @@
 package studentarrayexample;
 
 /**
- * A hilariously simple, student class.
+ * A hilariously simple, student class, used for one of my classes.
  * 
  * @author Brian Furness
  */
@@ -27,6 +27,11 @@ public class Student {
 	 * the students Grade Point Average.
 	 */
 	private float gpa;
+	
+	/**
+	 * max courses for student
+	 */
+	private int maxCourse;
 	
 	/**
 	 * Create a new student.
@@ -137,5 +142,23 @@ public class Student {
 		}else{
 			return name + " age: " + age + " ID: " + studentId + " GPA: " + gpa;
 		}
+	}
+
+	/**
+	 * Get the max courses for the student.
+	 * 
+	 * @return the maximum number of courses the student may take.
+	 */
+	public int getMaxCourse() {
+		return maxCourse;
+	}
+
+	/**
+	 * Set the max course that the student can take.
+	 * 
+	 * @param maxCourse the maximum number of courses the student may take.
+	 */
+	public void setMaxCourse(int maxCourse) {
+		this.maxCourse = maxCourse;
 	}
 }
