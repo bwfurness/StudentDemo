@@ -40,6 +40,8 @@ public class StudentTester {
 		}
 		c.dropStudent(students[1]);
 		c.dropStudent(students[1]);
+		
+		System.out.println("Change for fetch example");
 	}
 	
 	
