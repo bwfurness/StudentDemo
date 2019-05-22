@@ -13,10 +13,10 @@ public class StudentTester {
 	 * 
 	 * @param args the command line arguments.  Not used by this program.
 	 */
-	public static void main(String[] args) {
-		// pre-populate the student array with our 5 static students.
+	public static void main(String[] args){
 		Student[] students = {
-					new Student("Brian Furness", 28, 193),
+
+			new Student("Brian Furness", 28, 193),
 					new Student("Rick Morty", 20, 40142),
 					new Student("Mary Jane", 18, 13450),
 					new Student("James James", 23, 3145),
@@ -31,10 +31,15 @@ public class StudentTester {
 		students[4].setAge(27);
 		students[4].setStudentId(13425);
 		
-		// iterate over them using a for each loop.
+		Course c = new Course("Students 101");
 		for (Student student : students){
-			System.out.println(student);
+			c.addStudent (student);
 		}
+		for (Student student : c.getStudents()){
+			System.out.println (student);
+		}
+		c.dropStudent(students[1]);
+		c.dropStudent(students[1]);
 	}
 	
 	
