@@ -1,7 +1,7 @@
 package studentarrayexample;
 
 /**
- * A hilariously simple, student class.
+ * A hilariously simple, student class, used for one of my classes.
  * 
  * @author Brian
  */
