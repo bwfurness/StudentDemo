@@ -3,7 +3,7 @@ package studentarrayexample;
 /**
  * A hilariously simple, student class.
  * 
- * @author Brian
+ * @author Brian Furness
  */
 // 2019-05-22
 public class Student {
