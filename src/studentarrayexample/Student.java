@@ -5,6 +5,7 @@ package studentarrayexample;
  * 
  * @author Brian
  */
+// 2019-05-22
 public class Student {
 	
 	/**
